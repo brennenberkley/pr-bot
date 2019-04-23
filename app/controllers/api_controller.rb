@@ -9,7 +9,7 @@ class ApiController < ApplicationController
     return head 422 if pr.nil?
 
     approve_request(pr) if files_match?(pr) && needs_review?(pr)
-
+  
     head 200
   end
 
